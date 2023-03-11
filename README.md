@@ -4,5 +4,5 @@
   </a>  
 </p><br>
 <p align="center">
-  <b>Duck</b> is a database migration tool. Manage your database by creating incremental SQL changes or Delphi functions.
+  <b>Duck</b> is a database migration framework. Manage your database by creating incremental SQL changes or Delphi functions.
 </p><br>
