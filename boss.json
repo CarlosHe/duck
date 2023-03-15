@@ -1,0 +1,9 @@
+{
+	"name": "duck",
+	"description": "The Duck is a migration framework for database versioning",
+	"version": "0.1.0",
+	"homepage": "https://github.com/CarlosHe/duck",
+	"mainsrc": "./src",
+	"projects": [],
+	"dependencies": {}
+}
