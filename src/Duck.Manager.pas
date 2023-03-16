@@ -154,22 +154,9 @@ begin
 end;
 
 procedure TDuckManager.Redo;
-var
-  I: Integer;
 begin
-  for I := Pred(FMigrationCollection.Count) downto 0 do
-  begin
-    if FMigrationCollection.Items[I].GetVersion > FVersion then
-      Continue;
-    FDuckRepository.ExecuteScriptMigration(FMigrationCollection.Items[I].GetDown);
-    FDuckRepository.ExecuteScriptMigration(FMigrationCollection.Items[I].GetUp);
-    FDuckRepository.UpdateIsApplied(FMigrationCollection.Items[I].GetVersion, True);
-    UpdateIsAppliedVersionEntityItemByVersionId(FMigrationCollection.Items[I].GetVersion, FVersionEntityCollection, True);
-    FVersion := FMigrationCollection.Items[I].GetVersion;
-    if FPendingMigrationCollection.Contains(FMigrationCollection[I]) then
-      FPendingMigrationCollection.Remove(FMigrationCollection[I]);
-    Break;
-  end;
+  Down;
+  UpByOne;
 end;
 
 procedure TDuckManager.Reset;
