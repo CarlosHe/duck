@@ -161,6 +161,7 @@ begin
   begin
     if FMigrationCollection.Items[I].GetVersion > FVersion then
       Continue;
+    FDuckRepository.ExecuteScriptMigration(FMigrationCollection.Items[I].GetDown);
     FDuckRepository.ExecuteScriptMigration(FMigrationCollection.Items[I].GetUp);
     FDuckRepository.UpdateIsApplied(FMigrationCollection.Items[I].GetVersion, True);
     UpdateIsAppliedVersionEntityItemByVersionId(FMigrationCollection.Items[I].GetVersion, FVersionEntityCollection, True);
