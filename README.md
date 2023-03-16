@@ -184,3 +184,7 @@ begin
   DuckManager.Reset;
 end.
 ```
+
+## ⚠️ License
+
+`Duck` is free and open-source software licensed under the [MIT License](https://github.com/CarlosHe/duck/blob/main/LICENSE). 
