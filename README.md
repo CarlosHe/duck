@@ -33,7 +33,7 @@ begin
 end.
 ```
 
-## ⚡️ Create class migration
+## Create class migration
 ```delphi
 unit Migration.V20230315000000_CreateTableExample;
 
@@ -98,14 +98,14 @@ end;
 end.
 ```
 
-## ⚡️ Add class migration
+## Add class migration
 ```delphi
 begin
   DuckManager.AddMigration(TCreateExampleTableMigration.New);
 end.
 ```
 
-## ⚡️ Create file migration
+## Create file migration
 Create migration file (version_name.sql).
 ex: 20230315000000_create_table_examples.sql
 ```sql
@@ -115,7 +115,7 @@ CREATE TABLE examples (name varchar NOT NULL);
 DROP TABLE examples;
 ```
 
-## ⚡️ Add folder migration files
+## Add folder migration files
 ```delphi
 uses
   Duck.Contract.ParseMigration,
@@ -129,7 +129,7 @@ begin
 end.
 ```
 
-## ⚡️ Up
+## Up
 Apply all available migrations.
 ```delphi
 begin
@@ -137,7 +137,7 @@ begin
 end.
 ```
 
-## ⚡️ UpToVersion
+## UpToVersion
 Migrate up to a specific version.
 ```delphi
 begin
@@ -145,7 +145,7 @@ begin
 end.
 ```
 
-## ⚡️ UpByOne
+## UpByOne
 Migrate up a single migration from the current version
 ```delphi
 begin
@@ -153,7 +153,7 @@ begin
 end.
 ```
 
-## ⚡️ Down
+## Down
 Roll back a single migration from the current version.
 ```delphi
 begin
@@ -161,7 +161,7 @@ begin
 end.
 ```
 
-## ⚡️ DownToVersion
+## DownToVersion
 Roll back migrations to a specific version.
 ```delphi
 begin
@@ -169,7 +169,7 @@ begin
 end.
 ```
 
-## ⚡️ Redo
+## Redo
 Roll back the most recently applied migration, then run it again.
 ```delphi
 begin
@@ -177,7 +177,7 @@ begin
 end.
 ```
 
-## ⚡️ Reset
+## Reset
 Roll back all migrations.
 ```delphi
 begin
