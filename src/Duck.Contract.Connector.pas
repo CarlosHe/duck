@@ -1,9 +1,18 @@
 unit Duck.Contract.Connector;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses
-  Data.DB;
+  {$IF DEFINED(FPC)}
+  DB
+  {$ELSE}
+  Data.DB
+  {$ENDIF}
+  ;
 
 type
 

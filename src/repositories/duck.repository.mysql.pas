@@ -1,7 +1,7 @@
-unit Duck.Repository.PostgreSQL;
+unit Duck.Repository.MySQL;
 
 {$IFDEF FPC}
-  {$MODE Delphi}
+  {$MODE Delphi} {$M+}
 {$ENDIF}
 
 interface
@@ -11,28 +11,29 @@ uses
   SysUtils,
   {$ELSE}
   {$ENDIF}
-  Duck.Contract.Entity.Version,
   Duck.Contract.Repository,
-  Duck.Contract.Connector;
+  Duck.Contract.Entity.Version,
+  Duck.Contract.Connector
+  ;
 
 type
 
-  TDuckPostgreSQLRepository = class(TInterfacedObject, IDuckRepository)
+  { TDuckMySQLRepository }
+
+  TDuckMySQLRepository = class(TInterfacedObject, IDuckRepository)
   strict private
     { strict private declarations }
     constructor Create(const AConnector: IDuckConnector);
   private
     { private declarations }
     FConnector: IDuckConnector;
-  protected
-    { protected declarations }
   public
     { public declarations }
     procedure CreateDuckTable;
     function GetVersion: Int64;
+    function GetVersionEntityCollection: TArray<IDuckVersionEntity>;
     function StoreVersion(const AVersionId: Int64; const AIsApplied: Boolean): IDuckVersionEntity;
     procedure UpdateIsApplied(const AVersionId: Int64; const AIsApplied: Boolean);
-    function GetVersionEntityCollection: TArray<IDuckVersionEntity>;
     procedure ExecuteScriptMigration(const AScriptMigration: string);
     class function New(const AConnector: IDuckConnector): IDuckRepository;
   end;
@@ -50,39 +51,33 @@ uses
   {$ENDIF}
   Duck.Entity.Version;
 
-{ TDuckPostgreSQLRepository }
+{ TDuckMySQLRepository }
 
-constructor TDuckPostgreSQLRepository.Create(const AConnector: IDuckConnector);
+constructor TDuckMySQLRepository.Create(const AConnector: IDuckConnector);
 begin
   FConnector := AConnector;
 end;
 
-procedure TDuckPostgreSQLRepository.CreateDuckTable;
+procedure TDuckMySQLRepository.CreateDuckTable;
 begin
   FConnector.ExecuteSQL(
-    'CREATE SEQUENCE IF NOT EXISTS public.duck_db_version_id_seq' + #13#10 +
-    '    INCREMENT 1' + #13#10 +
-    '    START 1' + #13#10 +
-    '    MINVALUE 1' + #13#10 +
-    '    MAXVALUE 2147483647' + #13#10 +
-    '    CACHE 1;' + #13#10 +
     'CREATE TABLE IF NOT EXISTS duck_db_version' + #13#10 +
     '(' + #13#10 +
-    '    id integer NOT NULL DEFAULT nextval(' + QuotedStr('duck_db_version_id_seq') + '::regclass),' + #13#10 +
+    '    id integer NOT NULL AUTO_INCREMENT,' + #13#10 +
     '    version_id bigint NOT NULL,' + #13#10 +
     '    is_applied boolean NOT NULL,' + #13#10 +
-    '    updated_at timestamp without time zone DEFAULT ' + QuotedStr('NOW()') + ',' + #13#10 +
-    '    CONSTRAINT duck_db_version_pkey PRIMARY KEY (id)' + #13#10 +
+    '    updated_at timestamp DEFAULT CURRENT_TIMESTAMP,' + #13#10 +
+    '    PRIMARY KEY(id)' + #13#10 +
     ')'
     );
 end;
 
-procedure TDuckPostgreSQLRepository.ExecuteScriptMigration(const AScriptMigration: string);
+procedure TDuckMySQLRepository.ExecuteScriptMigration(const AScriptMigration: string);
 begin
   FConnector.ExecuteSQL(AScriptMigration);
 end;
 
-function TDuckPostgreSQLRepository.GetVersion: Int64;
+function TDuckMySQLRepository.GetVersion: Int64;
 var
   LDataSet: TDataSet;
 begin
@@ -96,7 +91,7 @@ begin
   end;
 end;
 
-function TDuckPostgreSQLRepository.GetVersionEntityCollection: TArray<IDuckVersionEntity>;
+function TDuckMySQLRepository.GetVersionEntityCollection: TArray<IDuckVersionEntity>;
 var
   LDataSet: TDataSet;
   LDuckVersionEntity: IDuckVersionEntity;
@@ -123,12 +118,12 @@ begin
   end;
 end;
 
-class function TDuckPostgreSQLRepository.New(const AConnector: IDuckConnector): IDuckRepository;
+class function TDuckMySQLRepository.New(const AConnector: IDuckConnector): IDuckRepository;
 begin
   Result := Self.Create(AConnector)
 end;
 
-function TDuckPostgreSQLRepository.StoreVersion(const AVersionId: Int64; const AIsApplied: Boolean): IDuckVersionEntity;
+function TDuckMySQLRepository.StoreVersion(const AVersionId: Int64; const AIsApplied: Boolean): IDuckVersionEntity;
 var
   LDataSet: TDataSet;
   LDuckVersionEntity: IDuckVersionEntity;
@@ -158,9 +153,10 @@ begin
   end;
 end;
 
-procedure TDuckPostgreSQLRepository.UpdateIsApplied(const AVersionId: Int64; const AIsApplied: Boolean);
+procedure TDuckMySQLRepository.UpdateIsApplied(const AVersionId: Int64; const AIsApplied: Boolean);
 begin
-  FConnector.ExecuteSQL('UPDATE duck_db_version SET is_applied = ' + BoolToStr(AIsApplied, True) + ', updated_at = NOW() WHERE version_id = ' + AVersionId.ToString + ';');
+  FConnector.ExecuteSQL('UPDATE duck_db_version SET is_applied = ' + BoolToStr(AIsApplied, True) + ', updated_at = CURRENT_TIMESTAMP WHERE version_id = ' + AVersionId.ToString + ';');
 end;
 
 end.
+

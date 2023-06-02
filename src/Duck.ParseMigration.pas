@@ -1,9 +1,17 @@
 unit Duck.ParseMigration;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses
+  {$IF DEFINED(FPC)}
+  Classes,
+  {$ELSE}
   System.Classes,
+  {$ENDIF}
   Duck.Contract.ParseMigration,
   Duck.Contract.Migration,
   Duck.Contract.Manager;
@@ -31,8 +39,14 @@ type
 implementation
 
 uses
+  {$IF DEFINED(FPC)}
+  SysUtils,
+  FileUtil,
+  //IOUtils,
+  {$ELSE}
   System.SysUtils,
   System.IOUtils,
+  {$ENDIF}
   Duck.Migration;
 
 const
@@ -48,12 +62,27 @@ end;
 
 procedure TDuckParseMigration.LoadFromFolder(const AFolderName: string);
 var
+  {$IF DEFINED(FPC)}
+  LFiles: TStringList;
+  {$ELSE}
   LFiles: TArray<string>;
+  {$ENDIF}
   I: Integer;
 begin
+  {$IF DEFINED(FPC)}
+  LFiles := TStringList.Create;
+  try
+    FindAllFiles(LFiles, ExpandFileName(AFolderName), '*.sql', True);
+    for I := 0 to Pred(LFiles.Count) do
+    FDuckManager.AddMigration(Parse(LFiles.Strings[I]));
+  finally
+    LFiles.Free;
+  end;
+  {$ELSE}
   LFiles := TDirectory.GetFiles(AFolderName, '*.sql');
   for I := Low(LFiles) to High(LFiles) do
     FDuckManager.AddMigration(Parse(LFiles[I]));
+  {$ENDIF}
 end;
 
 class function TDuckParseMigration.New(const ADuckManager: IDuckManager): IDuckParseMigration;
@@ -141,7 +170,11 @@ begin
         LStringList.Add('-- ' + TAG_DUCK_DOWN);
         LStringList.Add(LMigrationCollection[I].GetDown);
       end;
+      {$IF DEFINED(FPC)}
+      LStringList.SaveToFile( ConcatPaths([ExpandFileName(AFolderName), string.Join('_', [LMigrationCollection[I].GetVersion, LMigrationCollection[I].GetName]) + '.sql']) );
+      {$ELSE}
       LStringList.SaveToFile(TPath.Combine(AFolderName, string.Join('_', [LMigrationCollection[I].GetVersion, LMigrationCollection[I].GetName]) + '.sql'));
+      {$ENDIF}
     finally
       LStringList.Free;
     end;

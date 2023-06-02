@@ -1,5 +1,9 @@
 unit Duck.Contract.ParseMigration;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 type

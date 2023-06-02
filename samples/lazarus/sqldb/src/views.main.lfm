@@ -1,0 +1,79 @@
+object Form1: TForm1
+  Left = 456
+  Height = 440
+  Top = 224
+  Width = 570
+  Caption = 'Form1'
+  ClientHeight = 440
+  ClientWidth = 570
+  OnCreate = FormCreate
+  LCLVersion = '2.3.0.0'
+  object ButtonUp: TButton
+    Left = 25
+    Height = 40
+    Top = 24
+    Width = 120
+    Caption = 'Up'
+    OnClick = ButtonUpClick
+    TabOrder = 0
+  end
+  object ButtonDown: TButton
+    Left = 25
+    Height = 40
+    Top = 72
+    Width = 120
+    Caption = 'Down'
+    OnClick = ButtonDownClick
+    TabOrder = 1
+  end
+  object ButtonReset: TButton
+    Left = 25
+    Height = 40
+    Top = 120
+    Width = 120
+    Caption = 'Reset'
+    OnClick = ButtonResetClick
+    TabOrder = 2
+  end
+  object ButtonParse: TButton
+    Left = 25
+    Height = 40
+    Top = 168
+    Width = 120
+    Caption = 'Parse from Folder'
+    OnClick = ButtonParseClick
+    TabOrder = 3
+  end
+  object ButtonSave: TButton
+    Left = 25
+    Height = 40
+    Top = 216
+    Width = 120
+    Caption = 'Save To Folder'
+    OnClick = ButtonSaveClick
+    TabOrder = 4
+  end
+  object SQLConnector: TSQLConnector
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'itecerp'
+    KeepConnection = False
+    Params.Strings = (
+      'Port=3306'
+    )
+    Password = 'root'
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = 'localhost'
+    ConnectorType = 'MySQL 5.6'
+    Port = 3306
+    Left = 328
+    Top = 48
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = False
+    Database = SQLConnector
+    Left = 319
+    Top = 122
+  end
+end
