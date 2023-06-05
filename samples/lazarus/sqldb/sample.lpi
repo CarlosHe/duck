@@ -107,6 +107,11 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Migration.V20230527111000_CreateTableUser"/>
       </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\connectors\duck.connector.sqldb.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Duck.Connector.SQLdb"/>
+      </Unit>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
