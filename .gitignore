@@ -67,3 +67,31 @@ __recovery/
 modules/
 
 # End of https://www.toptal.com/developers/gitignore/api/delphi
+samples/lazarus/sqldb/sample.lps
+samples/lazarus/sqldb/backup/sample.lps
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.Contract.Connector.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.Contract.Entity.Version.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.Contract.Manager.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.Contract.Migration.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.Contract.ParseMigration.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.Contract.Repository.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.Entity.Version.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.Manager.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.Migration.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.ParseMigration.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/sample.compiled
+src/AutomaticConversion.log
+samples/lazarus/sqldb/sample.lps
+samples/lazarus/sqldb/sample.lpi
+samples/lazarus/sqldb/sample.lps
+samples/lazarus/sqldb/backup/sample.lpi
+samples/lazarus/sqldb/backup/sample.lpr
+samples/lazarus/sqldb/lib/x86_64-win64/duck.connector.sqldb.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/duck.repository.mysql.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/Duck.Repository.PostgreSQL.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/migration.v20230527111000_createtableuser.ppu
+samples/lazarus/sqldb/lib/x86_64-win64/sample.obj
+samples/lazarus/sqldb/lib/x86_64-win64/sample.res
+samples/lazarus/sqldb/lib/x86_64-win64/views.main.lfm
+samples/lazarus/sqldb/lib/x86_64-win64/views.main.ppu
+src/connectors/backup/duck.connector.sqldb.pas

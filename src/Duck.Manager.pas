@@ -1,10 +1,19 @@
 unit Duck.Manager;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses
+  {$IF DEFINED(FPC)}
+  Generics.Collections,
+  Generics.Defaults,
+  {$ELSE}
   System.Generics.Collections,
   System.Generics.Defaults,
+  {$ENDIF}
   Duck.Contract.Manager,
   Duck.Contract.Repository,
   Duck.Contract.Migration,

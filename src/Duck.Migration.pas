@@ -1,5 +1,9 @@
 unit Duck.Migration;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses

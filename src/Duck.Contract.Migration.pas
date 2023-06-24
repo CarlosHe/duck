@@ -1,5 +1,9 @@
 unit Duck.Contract.Migration;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 type

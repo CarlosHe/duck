@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="sample.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Sample"/>
+        <CursorPos X="30" Y="18"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="src\views.main.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="64"/>
+        <CursorPos X="26" Y="71"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\Duck.Contract.Connector.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="9"/>
+        <CursorPos X="14" Y="22"/>
+        <UsageCount Value="222"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\Duck.Contract.Entity.Version.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="8"/>
+        <CursorPos X="14" Y="14"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\Duck.Contract.Manager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="10"/>
+        <TopLine Value="5"/>
+        <CursorPos X="15" Y="23"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\Duck.Contract.Migration.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="11"/>
+        <CursorPos X="14" Y="13"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\Duck.Contract.ParseMigration.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="2"/>
+        <CursorPos X="15" Y="13"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\Duck.Contract.Repository.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="7"/>
+        <CursorPos X="14" Y="19"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\Duck.Entity.Version.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="9"/>
+        <TopLine Value="56"/>
+        <CursorPos Y="65"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\Duck.Manager.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="182"/>
+        <CursorPos Y="194"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\Duck.Migration.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="222"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="112"/>
+        <CursorPos X="28" Y="120"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\connectors\duck.connector.sqldb.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Duck.Connector.SQLdb"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="8" Y="10"/>
+        <UsageCount Value="222"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\repositories\Duck.Repository.PostgreSQL.pas"/>
+        <IsPartOfProject Value="True"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="36" Y="26"/>
+        <UsageCount Value="221"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\repositories\duck.repository.mysql.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Duck.Repository.MySQL"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="144"/>
+        <CursorPos X="42" Y="72"/>
+        <UsageCount Value="222"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Migration.V20230527111000_CreateTableUser"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="45"/>
+        <CursorPos Y="54"/>
+        <UsageCount Value="217"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\fpcupdeluxe642\lazarus\lcl\include\customform.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="910"/>
+        <CursorPos Y="919"/>
+        <UsageCount Value="49"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="29">
+      <Position>
+        <Filename Value="src\views.main.pas"/>
+        <Caret Line="84" Column="48" TopLine="66"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views.main.pas"/>
+        <Caret Line="70" Column="54" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views.main.pas"/>
+        <Caret Line="78" Column="33" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views.main.pas"/>
+        <Caret Line="87" TopLine="79"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <Caret Line="49" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <Caret Line="50" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="165" TopLine="157"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="166" TopLine="157"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <Caret Line="49" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <Caret Line="50" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="168" TopLine="157"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <Caret Line="54" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <Caret Line="55" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <Caret Line="54" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <Caret Line="59" Column="63" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="175" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <Caret Line="49" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\migrations\migration.v20230527111000_createtableuser.pas"/>
+        <Caret Line="54" TopLine="45"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="175" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="178" Column="43" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="173" Column="35" TopLine="166"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="175" TopLine="166"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="176" Column="23" TopLine="166"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="175" TopLine="166"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="176" TopLine="166"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="170" Column="19" TopLine="163"/>
+      </Position>
+      <Position>
+        <Filename Value="src\views.main.pas"/>
+        <Caret Line="71" Column="26" TopLine="64"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="34" Column="20" TopLine="26"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="76" Column="42" TopLine="69"/>
+      </Position>
+      <Position>
+        <Filename Value="..\..\..\src\Duck.ParseMigration.pas"/>
+        <Caret Line="31" Column="14" TopLine="21"/>
+      </Position>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints>
+      <Item>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="..\..\..\src\Duck.Manager.pas"/>
+        <Line Value="235"/>
+      </Item>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>

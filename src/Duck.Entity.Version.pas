@@ -1,5 +1,9 @@
 unit Duck.Entity.Version;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses

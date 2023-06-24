@@ -1,5 +1,9 @@
 unit Duck.Contract.Repository;
 
+{$IFDEF FPC}
+  {$MODE Delphi}
+{$ENDIF}
+
 interface
 
 uses
@@ -8,12 +12,12 @@ uses
 type
 
   IDuckRepository = interface
-    ['{4220CCDF-269D-4FAF-A7F6-30278647B96E}']
+    ['{AE784C3A-6570-455B-8105-D45D653B0BCD}']
     procedure CreateDuckTable;
     function GetVersion: Int64;
+    function GetVersionEntityCollection: TArray<IDuckVersionEntity>;
     function StoreVersion(const AVersionId: Int64; const AIsApplied: Boolean): IDuckVersionEntity;
     procedure UpdateIsApplied(const AVersionId: Int64; const AIsApplied: Boolean);
-    function GetVersionEntityCollection: TArray<IDuckVersionEntity>;
     procedure ExecuteScriptMigration(const AScriptMigration: string);
   end;
 
